@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styles from "./BreadCrumb.module.css";
 import { PiGreaterThanLight } from "react-icons/pi";
 
@@ -5,9 +6,9 @@ export default function BreadCrumb() {
   return (
     <div className="container">
       <div className={styles.breadCrumb}>
-        <p>Home</p>
+        <Link to="/">Home</Link>
         <PiGreaterThanLight className={styles.breadCrumbIcon} />
-        <p>My cart</p>
+        <Link to="/cart">My cart</Link>
       </div>
     </div>
   );
@@ -17,11 +18,11 @@ export function CheckoutBreadCrum() {
   return (
     <div>
       <div className={styles.breadCrumb}>
-        <p>Home</p>
+        <Link to="/">Home</Link>
         <PiGreaterThanLight className={styles.breadCrumbIcon} />
-        <p>My cart</p>
+        <Link to="/cart">My cart</Link>
         <PiGreaterThanLight className={styles.breadCrumbIcon} />
-        <p>Checkout</p>
+        <Link to="/checkout">Checkout</Link>
       </div>
     </div>
   );

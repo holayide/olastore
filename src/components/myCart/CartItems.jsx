@@ -1,10 +1,13 @@
 import PropTypes from "prop-types";
+import { toast, Bounce } from "react-toastify";
 import { RiDeleteBin7Line } from "react-icons/ri";
 import styles from "./CartItems.module.css";
 import { FiMinus } from "react-icons/fi";
 import { FiPlus } from "react-icons/fi";
 
 export default function CartItems({ name, price, img, className }) {
+  const remove = () => toast.warn("Deleted!", { transition: Bounce });
+
   return (
     <div className={`${styles.cartItems} ${{ className }}`}>
       <div className={styles.cartItem}>
@@ -26,7 +29,7 @@ export default function CartItems({ name, price, img, className }) {
         </div>
       </div>
 
-      <div className={styles.redEmptyBin}>
+      <div className={styles.redEmptyBin} onClick={remove}>
         <RiDeleteBin7Line className={styles.redBin} />
         <p>Remove from cart</p>
       </div>

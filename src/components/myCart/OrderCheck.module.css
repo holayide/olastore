@@ -49,12 +49,12 @@
 
   border-radius: 8px;
   background: var(--pri-color);
-  margin: 3.2rem 2.4rem;
+  margin: 3.2rem 0 2.4rem;
 }
 
 .orderCheck > a:hover,
 .orderCheck > a:active {
-  background-color: #43d17f;
+  background-color: var(--hover-green);
 }
 
 .orderCheck > p:last-of-type {

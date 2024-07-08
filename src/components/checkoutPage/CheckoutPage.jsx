@@ -1,6 +1,6 @@
 import styles from "./CheckoutPage.module.css";
 import PropTypes from "prop-types";
-import { FaRegCheckCircle } from "react-icons/fa";
+import { toast } from "react-toastify";
 import { Link } from "react-router-dom";
 import CartItems from "../myCart/CartItems";
 import corset from "../../assets/images/silver top.svg";
@@ -8,8 +8,13 @@ import kidsStar from "../../assets/images/kids-star.svg";
 import lacoste from "../../assets/images/lacoste.svg";
 import { MdOutlineEdit } from "react-icons/md";
 import { CheckoutBreadCrum } from "../breadCrumb/BreadCrumb";
+import DeliveryOptions from "./DeliveryOptions";
 
 function CheckoutPage() {
+  const confirmOrder = () => {
+    toast.success("Order Confirmed");
+  };
+
   return (
     <div className={styles.checkOutSection}>
       <div className="container">
@@ -20,6 +25,7 @@ function CheckoutPage() {
           <h2>Checkout</h2>
           <div className={styles.checkoutsSection}>
             <div className={styles.customerCheckoutsSection}>
+              {/* Customer Details */}
               <CheckOutBox>
                 <div className={styles.customerDetails}>
                   <h3>Customer Details</h3>
@@ -45,22 +51,15 @@ function CheckoutPage() {
                 </div>
               </CheckOutBox>
 
+              {/* Delivery Options */}
               <CheckOutBox>
                 <div className={styles.options}>
                   <h3>Delivery Options</h3>
-                  <div className={styles.optionsDelivery}>
-                    <div>
-                      <FaRegCheckCircle className={styles.checkIcon} />
-                      <span>Door Delivery (1 - 3 days)</span>
-                    </div>
-                    <div>
-                      <FaRegCheckCircle className={styles.checkIcon} />
-                      <span>Pick up from store</span>
-                    </div>
-                  </div>
+                  <DeliveryOptions />
                 </div>
               </CheckOutBox>
 
+              {/* Items in checkout */}
               <div className={styles.checkBoxes}>
                 <div className={styles.customersItem}>
                   <h3>Items in checkout</h3>
@@ -88,14 +87,14 @@ function CheckoutPage() {
                 <hr className={styles.checkourHr} />
               </div>
 
+              {/* Payment Options */}
               <CheckOutBox>
                 <h3>Payment Options</h3>
                 <p>Pay with Cards, Bank Transfer or USSD</p>
               </CheckOutBox>
             </div>
 
-            {/* 2 */}
-
+            {/* 2 - Order Checkout Details */}
             <div className={styles.checkOutCard}>
               <CheckOutBox>
                 <div className={styles.innerCheckOutCard}>
@@ -122,7 +121,9 @@ function CheckoutPage() {
                     </div>
                   </div>
 
-                  <Link to="#/">Confirm order</Link>
+                  <Link to="#/" onClick={confirmOrder}>
+                    Confirm order
+                  </Link>
                   <p>
                     Return Policy: &nbsp; Return within 3 days for all items.
                     Read more on our return policy <Link to="#/">here</Link>.

@@ -97,16 +97,24 @@
   }
 
   .mycart {
-    padding-bottom: 2rem;
+    padding-bottom: 27rem;
   }
 
   .mycart > .boxes {
     padding: 3.2rem 0 5rem;
   }
+
+  .footerContainer {
+    display: none;
+  }
 }
 
 /* mobile: max-width: 500px */
 @media (max-width: 31.25rem) {
+  .mycart {
+    padding-bottom: 30rem;
+  }
+
   .mycart > h2 {
     font-size: 2.4rem;
     text-align: center;

@@ -4,6 +4,7 @@ import { RiMapPinLine } from "react-icons/ri";
 import { FiPhone } from "react-icons/fi";
 import { MdOutlineEmail } from "react-icons/md";
 import { Link } from "react-router-dom";
+import { toast } from "react-toastify";
 
 export default function Footer() {
   return (
@@ -66,14 +67,25 @@ export default function Footer() {
 }
 
 function NewsLetter() {
+  const notify = () =>
+    toast.success("Thanks for Subscribing", {
+      position: "bottom-right",
+      theme: "dark",
+    });
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    notify();
+  };
+
   return (
-    <form className={styles.newsletter}>
+    <form className={styles.newsletter} onSubmit={handleSubmit}>
       <label htmlFor="news">Newsletter</label>
       <input
         type="text"
         name="News"
         id="news"
-        placeholder="Subscribe to out newsletter"
+        placeholder="Subscribe to our newsletter"
         className={styles.newsInput}
       />
       <button type="submit" className={styles.submitBtn}>

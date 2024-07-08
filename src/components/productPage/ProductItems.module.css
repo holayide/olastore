@@ -16,6 +16,13 @@
   }
 }
 
+/* max-width: 920px */
+@media (max-width: 57.5rem) {
+  .cardsWrapper {
+    gap: 2.2rem 1.6rem;
+  }
+}
+
 /* max-width: 754px */
 @media (max-width: 47.125rem) {
   .cardsWrapper {

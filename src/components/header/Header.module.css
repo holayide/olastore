@@ -1,11 +1,16 @@
 .header {
+  height: 10.4rem;
   background-color: var(--pri-color);
   box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.1);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
 .inner_header {
   max-width: 1512px;
+  height: 100%;
   margin: auto;
   padding: 3.6rem 6.4rem;
 
@@ -48,10 +53,13 @@
   gap: 3.2rem;
 }
 
+.mobileProfileWrapper a.activeLink .mobileListImg {
+  color: var(--sec-color);
+}
+
 .mobileProfileWrapper .mobileListImg {
   font-size: 3.2rem;
   font-weight: 700;
-  color: var(--sec-color);
 }
 
 /* nav section */
@@ -65,10 +73,26 @@
   align-items: center;
   gap: 0.6rem;
 
-  color: var(--sec-color);
   font-size: 1.8rem;
   font-weight: 500;
   line-height: 24px;
+  padding: 1.2rem 0;
+  border-bottom: 1px solid transparent;
+}
+
+.inner_header a.activeLink {
+  color: var(--sec-color);
+}
+
+.nav > ul li a.activeLink:hover {
+  border-bottom: 2px solid var(--sec-color);
+}
+.inner_header a.dormantLink {
+  color: var(--accent-grey);
+}
+
+.nav > ul li a:global(.active) {
+  border-bottom: 2px solid var(--sec-color);
 }
 
 .nav > ul li a > .listImg {
@@ -93,7 +117,7 @@
 /* max-width: 1100px */
 @media (max-width: 68.75rem) {
   .nav > ul {
-    gap: 4.8rem; /* gap not known ask */
+    gap: 4.8rem;
   }
 
   .nav > ul li a {
@@ -113,13 +137,14 @@
     position: absolute;
     width: 32.9rem;
     height: 44.8rem;
-    top: 11rem;
+    top: 10.3rem;
     left: -100%;
     padding: 1.6rem 0.8rem 2.4rem;
 
     transition: all 0.3s ease-in;
     z-index: 2;
     background-color: var(--sec-color);
+    box-shadow: 0 20px 30px 0 rgba(0, 0, 0, 0.07);
     border-radius: 0px 8px 8px 0px;
 
     /* Hide navigation */
@@ -142,27 +167,20 @@
     gap: 2rem;
   }
 
-  .nav > ul li a span {
+  .nav > ul li a {
+    padding: 0.8rem;
+  }
+
+  .inner_header a.activeLink {
     color: var(--text-color);
   }
 
   .nav > ul li a > .listImg {
-    color: var(--text-color);
     font-size: 2.4rem;
   }
 
   .hide {
     display: block;
-  }
-
-  .nav > ul li:last-of-type a {
-    display: block;
-    text-align: center;
-    margin-top: 7.2rem;
-  }
-
-  .nav > ul li:last-of-type a span {
-    color: var(--error-color);
   }
 
   .BtnWrapper {
@@ -193,6 +211,6 @@
   }
 
   .nav {
-    top: 6.5rem;
+    top: 10.3rem;
   }
 }

@@ -1,4 +1,5 @@
 import styles from "./Header.module.css";
+import { toast } from "react-toastify";
 import logo from "../../assets/icons/Olastore.svg";
 import { GrCart } from "react-icons/gr";
 import { TbNotes } from "react-icons/tb";
@@ -23,6 +24,10 @@ function Header() {
     setOpen(false);
   }
 
+  const dormantLink = () => {
+    toast.error("Sorry, this link is dormant.");
+  };
+
   return (
     <header className={styles.header}>
       <div className={styles.inner_header}>
@@ -43,10 +48,10 @@ function Header() {
 
         <div className={styles.mobileProfileWrapper}>
           <div className={styles.innerMobileProfile}>
-            <Link to="/#">
+            <Link to="/cart" className={styles.activeLink}>
               <GrCart className={styles.mobileListImg} />
             </Link>
-            <Link to="/#">
+            <Link to="/#" className={styles.dormantLink}>
               <GoPerson className={styles.mobileListImg} />
             </Link>
           </div>
@@ -55,54 +60,53 @@ function Header() {
         <nav className={`${styles.nav} ${open ? styles.open : ""}`}>
           <ul>
             <li>
-              <NavLink to="/cart" onClick={closeMenu}>
+              <NavLink
+                to="/cart"
+                onClick={closeMenu}
+                className={styles.activeLink}
+              >
                 <GrCart className={styles.listImg} />
                 <span>Cart</span>
               </NavLink>
             </li>
-            <li>
-              <NavLink to="/#" onClick={closeMenu}>
+            <li onClick={dormantLink}>
+              <Link to="#/" onClick={closeMenu} className={styles.dormantLink}>
                 <TbNotes className={styles.listImg} />
                 <span>My order</span>
-              </NavLink>
+              </Link>
             </li>
-            <li>
-              <NavLink to="/#" onClick={closeMenu}>
+            <li onClick={dormantLink}>
+              <Link to="#/" onClick={closeMenu} className={styles.dormantLink}>
                 <IoMdHeartEmpty className={styles.listImg} />
                 <span>Saved</span>
-              </NavLink>
+              </Link>
             </li>
 
-            <li>
-              <NavLink to="/#" onClick={closeMenu}>
+            <li onClick={dormantLink}>
+              <Link to="#/" onClick={closeMenu} className={styles.dormantLink}>
                 <GoPerson className={styles.listImg} />
                 <span>Me</span>
-              </NavLink>
+              </Link>
             </li>
 
             {/* start */}
             <li className={styles.hide}>
-              <NavLink to="/#" onClick={closeMenu}>
+              <Link to="/#" onClick={closeMenu} className={styles.dormantLink}>
                 <BiMessageX className={styles.listImg} />
                 <span>Pending reviews</span>
-              </NavLink>
+              </Link>
             </li>
             <li className={styles.hide}>
-              <NavLink to="/#" onClick={closeMenu}>
+              <Link to="/#" onClick={closeMenu} className={styles.dormantLink}>
                 <MdOutlinePolicy className={styles.listImg} />
                 <span>Return Policy</span>
-              </NavLink>
+              </Link>
             </li>
             <li className={styles.hide}>
-              <NavLink to="/#" onClick={closeMenu}>
+              <Link to="/#" onClick={closeMenu} className={styles.dormantLink}>
                 <MdHelpOutline className={styles.listImg} />
                 <span>Help?</span>
-              </NavLink>
-            </li>
-            <li className={`${styles.hide}`}>
-              <NavLink to="/#" onClick={closeMenu}>
-                <span>Sign Out</span>
-              </NavLink>
+              </Link>
             </li>
           </ul>
         </nav>

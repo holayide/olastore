@@ -1,7 +1,9 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import "./App.css";
 import Header from "./components/header/Header";
-import Footer from "./components/footer/Footer";
+// import Footer from "./components/footer/Footer";
 import HomePage from "./pages/HomePage";
 import Cart from "./pages/Cart";
 import CheckOut from "./pages/CheckOut";
@@ -18,8 +20,9 @@ function App() {
           <Route path="checkout" element={<CheckOut />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
-        <Footer />
+        {/* <Footer /> */}
       </BrowserRouter>
+      <ToastContainer theme="colored" />
     </div>
   );
 }

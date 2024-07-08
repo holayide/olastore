@@ -117,6 +117,14 @@
   cursor: pointer;
 }
 
+.newsletter .submitBtn:hover {
+  background-color: var(--hover-green);
+}
+
+.customToast {
+  font-style: 1.4rem;
+}
+
 /************************/
 /* Product listing */
 /************************/

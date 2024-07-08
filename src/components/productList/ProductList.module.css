@@ -151,6 +151,17 @@
     font-size: 1.4rem;
   }
 
+  .imgContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .imgContainer > img {
+    width: 60%;
+    object-fit: cover;
+  }
+
   .productSlider .displayItemsWrapper:nth-of-type(5),
   .productSlider .displayItemsWrapper:nth-of-type(4),
   .productSlider .displayItemsWrapper:nth-of-type(3) {
