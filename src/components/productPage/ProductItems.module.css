@@ -3,6 +3,28 @@
   grid-template-columns: repeat(4, 1fr);
   gap: 0.8rem 1.6rem;
   margin: 6.4rem 0 12.7rem;
+
+  position: relative;
+}
+
+.moveUp {
+  position: absolute;
+  width: 3.2rem;
+  height: 3.2rem;
+  border: 1px solid var(--accent-grey);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  bottom: -7rem;
+  right: 0;
+  cursor: pointer;
+}
+
+.moveUp .arrowUp {
+  font-size: 1.8rem;
+  color: var(--text-color);
 }
 
 /************************/
@@ -27,5 +49,9 @@
 @media (max-width: 47.125rem) {
   .cardsWrapper {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cardsWrapper {
+    gap: 2.2rem 0.8rem;
   }
 }

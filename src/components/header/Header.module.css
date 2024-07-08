@@ -1,11 +1,9 @@
 .header {
   height: 10.4rem;
   background-color: var(--pri-color);
-  box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 
-  position: sticky;
-  top: 0;
-  z-index: 10;
+  /* box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.1); */
 }
 
 .inner_header {
@@ -127,6 +125,10 @@
 
 /* max-width: 56.25rem */
 @media (max-width: 900px) {
+  .header {
+    height: 8rem;
+  }
+
   .mobileProfileWrapper {
     display: flex;
   }
@@ -192,12 +194,16 @@
   }
 
   .inner_header {
-    padding: 3.6rem 1.8rem;
+    padding: 1.8rem 2rem;
   }
 }
 
 /* @media (max-width: 500px) */
 @media (max-width: 500px) {
+  .header {
+    height: 6rem;
+  }
+
   .inner_header {
     padding: 1.6rem 0.8rem;
   }

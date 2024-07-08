@@ -51,7 +51,7 @@ function Header() {
             <Link to="/cart" className={styles.activeLink}>
               <GrCart className={styles.mobileListImg} />
             </Link>
-            <Link to="/#" className={styles.dormantLink}>
+            <Link to="#/" className={styles.dormantLink}>
               <GoPerson className={styles.mobileListImg} />
             </Link>
           </div>

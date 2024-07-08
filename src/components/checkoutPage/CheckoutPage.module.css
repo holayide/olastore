@@ -21,10 +21,6 @@
   position: relative;
 }
 
-.crum {
-  display: none;
-}
-
 .checkoutpage h2 {
   color: var(--text-color);
   font-family: var(--moul-font);
@@ -73,9 +69,7 @@
 }
 
 /* edit */
-.editDetails {
-  display: flex;
-  cursor: pointer;
+.editDetails > a {
   color: var(--accent-color-4);
 }
 
@@ -152,6 +146,26 @@
 .checkourHr {
   background: var(--accent-grey);
   margin: 1rem 0;
+}
+
+/* payment history */
+.paymentOption {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2.4rem;
+}
+
+.paymentOption h3 {
+  /* margin-bottom: 2.4rem; */
+  margin-bottom: 0;
+}
+
+.paymentOption > a {
+  color: var(--accent-color-4);
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 24px;
 }
 
 /* 2 */
@@ -292,10 +306,6 @@
 
 /* max-width: 500px */
 @media (max-width: 31.25rem) {
-  .crum {
-    display: block;
-  }
-
   .innercustomerDetail .editDetails > a:visited,
   .innercustomerDetail .editDetails > a:link {
     display: none;

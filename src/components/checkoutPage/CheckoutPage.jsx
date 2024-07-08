@@ -44,7 +44,7 @@ function CheckoutPage() {
                     </div>
 
                     <div className={styles.editDetails}>
-                      <Link to="/#">Edit details</Link>
+                      <Link to="#/">Edit details</Link>
                       <MdOutlineEdit className={styles.editIcon} />
                     </div>
                   </div>
@@ -89,7 +89,11 @@ function CheckoutPage() {
 
               {/* Payment Options */}
               <CheckOutBox>
-                <h3>Payment Options</h3>
+                <div className={styles.paymentOption}>
+                  <h3>Payment Options</h3>
+                  <Link to="#/">Change</Link>
+                </div>
+
                 <p>Pay with Cards, Bank Transfer or USSD</p>
               </CheckOutBox>
             </div>
@@ -102,7 +106,7 @@ function CheckoutPage() {
                   <div className={styles.itemPrices}>
                     <div className={styles.itemPrice}>
                       <p>Items price (3)</p>
-                      <p>N60, 000</p>
+                      <p>N42, 000</p>
                     </div>
 
                     <div className={styles.itemPrice}>
@@ -117,7 +121,7 @@ function CheckoutPage() {
 
                     <div className={styles.itemPrice}>
                       <p>Total cost</p>
-                      <p>N63, 000</p>
+                      <p>N45, 000</p>
                     </div>
                   </div>
 

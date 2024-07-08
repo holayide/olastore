@@ -11,7 +11,7 @@
   line-height: 24px;
 }
 
-.breadCrumb > a:first-of-type {
+.breadCrumb > a {
   color: var(--text-color);
 }
 
