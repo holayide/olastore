@@ -1,0 +1,28 @@
+.sort {
+  display: flex;
+  justify-content: end;
+}
+
+.innerSort {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0 0.8rem;
+  border: 1px solid var(--accent-grey);
+  border-radius: 4px;
+}
+
+.filterPin {
+  font-size: 1.8rem;
+  color: var(--accent-grey);
+}
+
+.select {
+  align-items: center;
+  padding: 1rem 0;
+  font-size: 1.8rem;
+  border: none;
+  outline: none;
+  color: var(--text-color);
+}

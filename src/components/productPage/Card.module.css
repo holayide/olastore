@@ -1,0 +1,161 @@
+.cardWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+
+  padding: 1.2rem 1.6rem;
+  transition: all 0.5s;
+}
+
+.cardWrapper:hover {
+  border-radius: 16px;
+  background: var(--sec-color);
+  box-shadow: 2px 2px 12px 0px rgba(0, 0, 0, 0.15);
+}
+
+.cardImg {
+  position: relative;
+}
+
+.cardImg > img {
+  display: block;
+  width: 100%;
+}
+
+.cardImg .heartWrapper {
+  width: 4rem;
+  height: 4rem;
+  position: absolute;
+  top: 22px;
+  right: 22px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+  background-color: var(--sec-color);
+}
+
+.heartWrapper .heartIcon {
+  font-size: 2.8rem;
+}
+
+.cardText {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cardText > p {
+  color: var(--text-color);
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 24px;
+  user-select: none;
+}
+
+.cardText > button {
+  color: var(--text-color);
+  font-weight: 700;
+  background-color: transparent;
+  border: none;
+  line-height: 24px;
+  cursor: pointer;
+}
+
+.cardText > button:hover {
+  color: #5c5c5c;
+}
+
+.cardIcon {
+  font-size: 2.8rem;
+}
+
+.cardTextWrapper > h3 {
+  color: var(--pri-color);
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin: 0.8rem 0;
+}
+
+.cardTextWrapper > p {
+  color: var(--accent-grey);
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 24px;
+  user-select: none;
+}
+
+.cardTextWrapper > button {
+  width: 100%;
+  padding: 1.2rem 0.8rem;
+  margin-top: 1.2rem;
+
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 24px;
+  color: var(--sec-color);
+
+  border-radius: 8px;
+  border: none;
+  background-color: var(--pri-color);
+  cursor: pointer;
+
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.cardWrapper:hover .cardTextWrapper > button {
+  opacity: 1;
+  pointer-events: auto;
+  visibility: visible;
+}
+
+/************************/
+/* Media Query */
+/************************/
+
+/* max-width: 1249px */
+@media (max-width: 78.07rem) {
+  .cardImg .heartWrapper {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .heartWrapper .heartIcon {
+    font-size: 2rem;
+  }
+}
+
+/* max-width: 920px */
+@media (max-width: 57.5rem) {
+  .cardTextWrapper > p {
+    font-size: 1.4rem;
+  }
+}
+
+/* max-width: 450px */
+@media (max-width: 28.125rem) {
+  .cardWrapper {
+    padding: 0.8rem;
+  }
+
+  .cardText > p {
+    font-size: 1.6rem;
+    font-weight: 700;
+  }
+
+  .cardIcon {
+    font-size: 2rem;
+  }
+
+  .cardTextWrapper > h3 {
+    font-size: 1.8rem;
+  }
+
+  .cardTextWrapper > p {
+    font-size: 1.2rem;
+  }
+}

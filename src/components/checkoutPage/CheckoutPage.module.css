@@ -1,0 +1,284 @@
+/* general: throughout checkout page */
+.checkoutpage h3 {
+  color: var(--text-color);
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 2.4rem;
+}
+
+.checkoutpage p {
+  color: var(--text-color);
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 24px;
+}
+/* end */
+
+.checkOutSection {
+  background-color: var(--sec-color);
+  padding-bottom: 18.6rem;
+
+  position: relative;
+}
+
+.crum {
+  display: none;
+}
+
+.checkoutpage h2 {
+  color: var(--text-color);
+  font-family: var(--moul-font);
+  font-size: 4.8rem;
+  font-weight: 400;
+  padding-top: 6.4rem;
+}
+
+.checkoutsSection {
+  display: flex;
+  justify-content: space-between;
+  gap: 7.6rem;
+  padding: 2.4rem 0 5.6rem;
+}
+
+.customerCheckoutsSection {
+  width: 75%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+.checkBoxes {
+  background-color: var(--sec-color);
+  box-shadow: 2px 2px 12px 0px rgba(0, 0, 0, 0.15);
+  padding: 1.6rem;
+}
+
+/* Customer Details */
+.innercustomerDetail {
+  display: flex;
+  justify-content: space-between;
+}
+
+.customerInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.customerInfo span {
+  font-weight: 700;
+  margin-right: 0.8rem;
+}
+
+/* edit */
+.editDetails {
+  display: flex;
+  cursor: pointer;
+  color: var(--accent-color-4);
+}
+
+.innercustomerDetail .editDetails > a:visited,
+.innercustomerDetail .editDetails > a:link {
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+.editDetails .editIcon {
+  font-size: 2.4rem;
+  display: none;
+  line-height: 24px;
+}
+
+/* Delivery Options */
+.optionsDelivery {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.optionsDelivery > div {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.optionsDelivery .checkIcon {
+  font-size: 2.4rem;
+  color: var(--accent-grey);
+}
+
+.optionsDelivery > div span {
+  color: var(--text-color);
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+/* Items in checkout */
+.customersItem > h3 {
+  padding: 1.6rem 0 0 1.6rem;
+}
+
+.customersItem p {
+  color: var(--error-color);
+}
+
+.checkourHr {
+  background: var(--accent-grey);
+  margin: 1rem 0;
+}
+
+/* 2 */
+
+.innerCheckOutCard {
+  padding: 1.6rem 1.2rem;
+}
+
+.itemPrices {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.itemPrices .itemPrice {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.8rem 0;
+}
+
+.itemPrices .itemPrice p:last-of-type {
+  font-weight: 700;
+}
+
+.itemPrices .itemPrice:last-of-type p:last-of-type {
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+
+.innerCheckOutCard > a {
+  display: block;
+  margin: 3.2rem 0 2.3rem;
+  padding: 1.2rem 0.8rem;
+
+  color: var(--sec-color);
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 24px;
+
+  border-radius: 8px;
+  background-color: var(--pri-color);
+}
+
+.innerCheckOutCard > p:last-of-type {
+  font-size: 1.4rem;
+}
+
+.innerCheckOutCard > p:last-of-type a {
+  color: var(--pri-color);
+}
+
+/************************/
+/* Media Query */
+/************************/
+
+/* max-width: 1200px */
+@media (max-width: 75rem) {
+  .checkoutsSection {
+    gap: 6.4rem;
+  }
+
+  .customerCheckoutsSection {
+    width: 85%;
+  }
+
+  .customersItem .redEmptyBin {
+    display: none;
+  }
+}
+
+/* max-width: 1100px */
+@media (max-width: 68.75rem) {
+  .checkoutsSection {
+    gap: 4.8rem;
+  }
+
+  .customerCheckoutsSection {
+    width: 100%;
+  }
+
+  .checkOutSection h3 {
+    font-size: 2rem;
+  }
+
+  .checkOutSection p {
+    font-size: 1.4rem;
+  }
+}
+
+/* @media (max-width: 880px) */
+@media (max-width: 55rem) {
+  .checkOutSection {
+    padding-bottom: 2rem;
+  }
+
+  .checkoutsSection {
+    padding-bottom: 0;
+  }
+
+  .checkOutCard {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .checkoutpage h2 {
+    font-size: 4rem;
+    padding-top: 4.8rem;
+  }
+
+  /* 2 */
+  .checkOutCard .checkBoxes {
+    padding: 0rem;
+  }
+
+  .innerCheckOutCard {
+    padding: 0.8rem 1.2rem 1.6rem;
+  }
+
+  .innerCheckOutCard > h3 {
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 1.6rem;
+  }
+
+  .innerCheckOutCard > a {
+    margin: 2.4rem 0 2.4rem;
+  }
+}
+
+/* max-width: 500px */
+@media (max-width: 31.25rem) {
+  .crum {
+    display: block;
+  }
+
+  .innercustomerDetail .editDetails > a:visited,
+  .innercustomerDetail .editDetails > a:link {
+    display: none;
+  }
+
+  .editDetails .editIcon {
+    display: block;
+  }
+
+  .checkoutpage h2 {
+    font-size: 2.4rem;
+    text-align: center;
+    padding: 2.4rem 0 3.2rem;
+  }
+}

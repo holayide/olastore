@@ -1,0 +1,151 @@
+.cartItems {
+  margin-top: 1.2rem;
+  padding: 0.8rem 1.6rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cartItems .cartItem {
+  display: flex;
+  gap: 2.4rem;
+}
+
+/* img */
+.cartItem .cartItemImg {
+  height: 10rem;
+}
+
+.cartItem .cartItemImg img {
+  height: 100%;
+}
+
+/* Details */
+.cartItems .cartItemDetails {
+  min-width: 12.8rem;
+  line-height: 24px;
+}
+
+.cartItems .cartItemDetails > p {
+  color: var(--text-color);
+  font-weight: 400;
+  font-size: 1.8rem;
+}
+
+.cartItems .cartItemDetails > h3 {
+  color: var(--pri-color);
+  font-weight: 700;
+  margin: 1.2rem 0;
+  font-size: 1.8rem;
+}
+
+.cartItemDetails .cartItemBtn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cartItemBtn > button {
+  width: 3.2rem;
+  padding: 0.8rem 0.4rem;
+  font-size: 1.4rem;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+
+.cartItemBtn .whiteBtn {
+  border-radius: 4px;
+  border: 1px solid var(--accent-grey);
+}
+
+.cartItemBtn .whiteBtn .sign {
+  color: var(--accent-grey);
+}
+
+.cartItemBtn .greenBtn {
+  border-radius: 4px;
+  color: var(--sec-color);
+  border: 1px solid var(--pri-color);
+  background-color: var(--pri-color);
+}
+
+.cartItemBtn span {
+  color: var(--text-color);
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+/* red bin */
+.redEmptyBin {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  cursor: pointer;
+}
+
+.redEmptyBin .redBin {
+  font-size: 2rem;
+  color: var(--error-color);
+}
+
+.redEmptyBin p {
+  color: var(--error-color);
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+/************************/
+/* Media Query */
+/************************/
+
+/* min-width: 1000px and  max-width: 1278px */
+@media (min-width: 62.5rem) and (max-width: 79.88rem) {
+  /* img */
+  .cartItem .cartItemImg {
+    height: 8rem;
+  }
+
+  /* Details */
+  .cartItems .cartItemDetails,
+  .cartItems .cartItemDetails > h3 {
+    font-size: 1.6rem;
+  }
+
+  .cartItemBtn > button {
+    padding: 0.4rem 0.2rem;
+  }
+
+  /* red bin */
+  .redEmptyBin .redBin {
+    font-size: 1.7rem;
+  }
+
+  .redEmptyBin p {
+    font-size: 1.4rem;
+  }
+}
+
+/* max-width: 1200px */
+@media (max-width: 75rem) {
+  .redEmptyBin p {
+    display: none;
+  }
+}
+
+/* max-width: 1000px */
+@media (max-width: 62.5rem) {
+  .cartItemBtn > button {
+    padding: 0.4rem;
+  }
+}
+
+/* small tablet: max-width: 700px */
+@media (max-width: 43.75rem) {
+  .redEmptyBin p {
+    display: none;
+  }
+}

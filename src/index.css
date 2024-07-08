@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Moul&display=swap");
+
+:root {
+  --lato-font: "Lato", sans-serif;
+  --moul-font: "Moul", serif;
+  --pri-color: #2ecc71;
+  --sec-color: #f1f5f8;
+  --accent-grey: #979090;
+  --accent-gold: #f9aa33;
+  --text-color: #333;
+  --error-color: #f42828;
+  --accent-color-4: #7b6ae3;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: var(--lato-font);
+  font-weight: 400;
+}
+
+/* :global(.container) {
+  border: 1px solid red;
+} */
+
+/*
+- Font sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 
+/ 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98 
+
+- Spacing system (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+*/
+
+/************************/
+/* Media Query */
+/************************/
+
+/* import PropTypes from "prop-types";
+
+Card.propTypes = {
+  itemImg: PropTypes.string,
+  name: PropTypes.string,
+  price: PropTypes.string,
+  category: PropTypes.string,
+}; */
