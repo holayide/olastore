@@ -5,9 +5,11 @@ import Footer from "../components/footer/Footer";
 
 function Cart() {
   return (
-    <div className={styles.cartWrapper}>
-      <BreadCrumb />
-      <MyCart />
+    <div className={styles.cartContainer}>
+      <div className={styles.cartWrapper}>
+        <BreadCrumb />
+        <MyCart />
+      </div>
       <div className={styles.footerContainer}>
         <Footer />
       </div>

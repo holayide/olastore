@@ -4,7 +4,7 @@ import Footer from "../components/footer/Footer";
 
 function CheckOut() {
   return (
-    <div>
+    <div className={styles.checkoutWrapper}>
       <CheckoutPage />
       <div className={styles.footerWrapper}>
         <Footer />

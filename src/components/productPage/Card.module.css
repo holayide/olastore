@@ -183,6 +183,11 @@
     padding: 0.8rem;
   }
 
+  .cardImg .heartWrapper {
+    top: 16px;
+    right: 16px;
+  }
+
   .cardText > p {
     font-size: 1.6rem;
     font-weight: 700;
@@ -202,5 +207,36 @@
 
   .cardTextWrapper > button {
     padding: 1rem 0.8rem;
+  }
+}
+
+/* max-width: 390px */
+@media (max-width: 24.38rem) {
+  .cardText > p {
+    font-size: 1.4rem;
+  }
+
+  .cardTextWrapper > h3 {
+    font-size: 1.6rem;
+  }
+
+  .cardTextWrapper > button {
+    font-size: 1.4rem;
+  }
+}
+
+/* max-width: 355px */
+@media (max-width: 22.19rem) {
+  .cardText > p {
+    font-size: 1.6rem;
+    font-weight: 700;
+  }
+
+  .cardTextWrapper > h3 {
+    font-size: 1.8rem;
+  }
+
+  .cardTextWrapper > p {
+    font-size: 1.4rem;
   }
 }

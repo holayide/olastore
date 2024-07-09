@@ -139,7 +139,7 @@
     position: absolute;
     width: 32.9rem;
     height: 44.8rem;
-    top: 10.3rem;
+    top: 8rem;
     left: -100%;
     padding: 1.6rem 0.8rem 2.4rem;
 
@@ -217,6 +217,6 @@
   }
 
   .nav {
-    top: 10.3rem;
+    top: 6rem;
   }
 }

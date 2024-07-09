@@ -55,3 +55,10 @@
     gap: 2.2rem 0.8rem;
   }
 }
+
+/* max-width: 355px */
+@media (max-width: 22.19rem) {
+  .cardsWrapper {
+    grid-template-columns: 1fr;
+  }
+}

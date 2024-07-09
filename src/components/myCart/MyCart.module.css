@@ -1,3 +1,9 @@
+.cartContainer {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
 .cartWrapper {
   background-color: var(--sec-color);
 }
@@ -50,6 +56,10 @@
 
 .emptyCart .whiteBin {
   font-size: 2rem;
+}
+
+.footerContainer {
+  margin-top: auto;
 }
 
 /************************/

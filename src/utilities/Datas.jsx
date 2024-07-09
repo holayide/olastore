@@ -1,4 +1,4 @@
-import jeans from "../assets/images/straight_jeans.svg";
+import jeans from "../assets/images/straight_jeans-compress.webp";
 import sneaker from "../assets/images/sneaker.svg";
 import blueGown from "../assets/images/blue-grown.svg";
 import corset from "../assets/images/silver top.svg";
