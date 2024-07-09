@@ -1,9 +1,9 @@
-import womenCloth from "../assets/images/women_clothing.png";
-import menFootwear from "../assets/images/men_footwears.png";
-import kidsDress from "../assets/images/Kid's_dress.png";
+import womenCloth from "../assets/images/women_clothing.webp";
+import menFootwear from "../assets/images/men_footwears.webp";
+import kidsDress from "../assets/images/Kid's_dress.webp";
 import womenFootwear from "../assets/images/women-footwear2.svg";
 import kidFootwear from "../assets/images/kids-footwear2.svg";
-// import shirt from "../assets/images/shirt.png";
+// import shirt from "../assets/images/shirt.webp";
 
 export const products = [
   {

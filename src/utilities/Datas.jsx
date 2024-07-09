@@ -1,22 +1,22 @@
-import jeans from "../assets/images/straight_jeans-compress.webp";
-import sneaker from "../assets/images/sneaker.svg";
-import blueGown from "../assets/images/blue-grown.svg";
-import corset from "../assets/images/silver top.svg";
+import jeans from "../assets/images/straight_jeans.webp";
+import sneaker from "../assets/images/sneaker.webp";
+import blueGown from "../assets/images/blue-grown.webp";
+import corset from "../assets/images/silver top.webp";
 
-import tonedDress from "../assets/images/toned-dress.svg";
-import zaraHeel from "../assets/images/zara.svg";
-import nativeGown from "../assets/images/baby-native-gown.svg";
-import qualityPolo from "../assets/images/quality-pollo.svg";
+import tonedDress from "../assets/images/toned-dress.webp";
+import zaraHeel from "../assets/images/zara.webp";
+import nativeGown from "../assets/images/baby-native-gown.webp";
+import qualityPolo from "../assets/images/quality-pollo.webp";
 
-import lacoste from "../assets/images/lacoste.svg";
-import flare from "../assets/images/flare-dress.svg";
-import flatShoe from "../assets/images/flat-shoe.svg";
-import versace from "../assets/images/versace.svg";
+import lacoste from "../assets/images/lacoste.webp";
+import flare from "../assets/images/flare-dress.webp";
+import flatShoe from "../assets/images/flat-shoe.webp";
+import versace from "../assets/images/versace.webp";
 
-import luxuryShoe from "../assets/images/luxury-shoe.svg";
-import luxuryBubu from "../assets/images/luxury_bubu.svg";
-import kidsPolo from "../assets/images/kids-polo.svg";
-import kidStar from "../assets/images/kids-star.svg";
+import luxuryShoe from "../assets/images/luxury-shoe.webp";
+import luxuryBubu from "../assets/images/luxury_bubu.webp";
+import kidsPolo from "../assets/images/kids-polo.webp";
+import kidStar from "../assets/images/kids-star.webp";
 
 export const datas = [
   // role 1

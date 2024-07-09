@@ -1,10 +1,10 @@
 import styles from "./MyCart.module.css";
 import { RiDeleteBin7Line } from "react-icons/ri";
 import CartItems from "./CartItems";
-import corset from "../../assets/images/silver top.svg";
+import corset from "../../assets/images/silver top.webp";
 import { OrderCheck } from "./OrderCheck";
-import kidsStar from "../../assets/images/kids-star.svg";
-import lacoste from "../../assets/images/lacoste.svg";
+import kidsStar from "../../assets/images/kids-star.webp";
+import lacoste from "../../assets/images/lacoste.webp";
 
 export default function MyCart() {
   return (
