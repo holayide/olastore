@@ -18,10 +18,11 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+
+  background-color: var(--sec-color);
 }
 
 .checkOutSection {
-  background-color: var(--sec-color);
   padding-bottom: 18.6rem;
 
   position: relative;

@@ -2,9 +2,7 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-}
 
-.cartWrapper {
   background-color: var(--sec-color);
 }
 
