@@ -161,6 +161,11 @@
   .footerDetailTexts {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: 3.4rem 8rem;
+  }
+
+  .newsletter {
+    margin-top: 1.6rem;
   }
 }
 
@@ -168,5 +173,26 @@
 @media (max-width: 31.25rem) {
   .footerLogo {
     display: none;
+  }
+
+  .footerDetailTexts h3 {
+    font-size: 1.8rem;
+  }
+
+  .newsletter label {
+    color: var(--sec-color);
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 24px;
+  }
+}
+
+/* max-width: 390px */
+@media (max-width: 390px) {
+  .footerLinks nav ul li a:link,
+  .footerLinks nav ul li a:visited,
+  .conatctItem a:link,
+  .conatctItem a:visited {
+    font-size: 1.4rem;
   }
 }

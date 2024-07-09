@@ -8,22 +8,29 @@
 }
 
 .moveUp {
-  position: absolute;
   width: 3.2rem;
   height: 3.2rem;
-  border: 1px solid var(--accent-grey);
+  border-radius: 50%;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
+  position: absolute;
   bottom: -7rem;
   right: 0;
+  background-color: var(--sec-color);
+  filter: drop-shadow(2px 2px 12px rgba(0, 0, 0, 0.15));
   cursor: pointer;
+}
+
+.moveUp:hover {
+  border: 1px solid var(--accent-grey);
 }
 
 .moveUp .arrowUp {
   font-size: 1.8rem;
+
   color: var(--text-color);
 }
 

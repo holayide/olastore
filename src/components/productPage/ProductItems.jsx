@@ -1,7 +1,7 @@
 import styles from "./ProductItems.module.css";
 import Card from "./Card";
 import { datas } from "../../utilities/Datas";
-import { LuArrowUp } from "react-icons/lu";
+import { HiArrowUp } from "react-icons/hi";
 
 export default function ProductItems() {
   return (
@@ -18,7 +18,7 @@ export default function ProductItems() {
       ))}
 
       <div className={styles.moveUp} onClick={() => window.scrollTo(0, 0)}>
-        <LuArrowUp className={styles.arrowUp} />
+        <HiArrowUp className={styles.arrowUp} />
       </div>
     </div>
   );
