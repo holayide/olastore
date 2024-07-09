@@ -325,6 +325,8 @@
 
   .editDetails .editIcon {
     display: block;
+    color: var(--accent-color-4);
+    cursor: pointer;
   }
 
   .checkoutpage h2 {

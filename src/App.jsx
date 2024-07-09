@@ -1,7 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import "./App.css";
 import Header from "./components/header/Header";
 import HomePage from "./pages/HomePage";
 import Cart from "./pages/Cart";
@@ -10,7 +9,7 @@ import NotFound from "./components/notFound/NotFound";
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <BrowserRouter>
         <Header />
         <Routes>

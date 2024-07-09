@@ -5,8 +5,7 @@ import Footer from "../components/footer/Footer";
 
 function HomePage() {
   return (
-    <div>
-      {/* <Header /> */}
+    <div style={{ backgroundColor: "#f1f5f8" }}>
       <Hero />
       <ProductList />
       <ProductPage />
