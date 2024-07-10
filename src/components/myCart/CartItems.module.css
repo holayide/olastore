@@ -47,12 +47,16 @@
 }
 
 .cartItemBtn > button {
-  width: 3.2rem;
+  width: 3rem;
   padding: 0.8rem 0.4rem;
   font-size: 1.4rem;
   cursor: pointer;
   background-color: transparent;
   border: none;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .cartItemBtn .whiteBtn {
