@@ -17,7 +17,8 @@ const ProductProvider = ({ children }) => {
   //   fetch products
   useEffect(() => {
     const fetchProducts = async (page) => {
-      const timbuUrl = `/api/products?organization_id=${organ_Id}&reverse_sort=false&page=${page}&size=${itemsPerPage}&Appid=${appId}&Apikey=${KEY}`;
+      // const timbuUrl = `/api/products?organization_id=${organ_Id}&reverse_sort=false&page=${page}&size=${itemsPerPage}&Appid=${appId}&Apikey=${KEY}`;
+      const timbuUrl = `https://timbu-get-all-products.reavdev.workers.dev/?organization_id=${organ_Id}&reverse_sort=false&page=${page}&size=${itemsPerPage}&Appid=${appId}&Apikey=${KEY}`;
 
       const resp = await fetch(timbuUrl);
       const data = await resp.json();
