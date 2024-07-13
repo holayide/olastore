@@ -142,9 +142,6 @@
 }
 
 /* Items in checkout */
-.customersItem > h3 {
-  padding: 1.6rem 0 0 1.6rem;
-}
 
 .customersItem p {
   color: var(--error-color);

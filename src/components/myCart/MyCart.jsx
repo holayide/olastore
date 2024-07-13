@@ -22,9 +22,11 @@ export default function MyCart() {
               </div>
             </div>
 
-            {cart.map((item) => {
-              return <CartItems key={item.id} item={item} />;
-            })}
+            {cart.length === 0 ? (
+              <h1>Your cart is empty 🛒</h1>
+            ) : (
+              cart.map((item) => <CartItems key={item.id} item={item} />)
+            )}
           </div>
 
           <div className={styles.cartDetails}>

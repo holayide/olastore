@@ -9,7 +9,7 @@ import { CheckoutBreadCrum } from "../breadCrumb/BreadCrumb";
 import DeliveryOptions from "./DeliveryOptions";
 
 function CheckoutPage({ onClick }) {
-  const { cart, total } = useContext(CartContext);
+  const { cart, total, itemAmount } = useContext(CartContext);
   const totalCost = total + 3000;
 
   return (
@@ -61,14 +61,18 @@ function CheckoutPage({ onClick }) {
                 <div className={styles.customersItem}>
                   <h3>Items in checkout</h3>
 
-                  {cart.map((item, i) => {
-                    return (
-                      <div key={`${item.unique_id}-${i}`}>
-                        <CartItems item={item} />
-                        <hr className={styles.checkourHr} />
-                      </div>
-                    );
-                  })}
+                  {cart.length === 0 ? (
+                    <h1>0</h1>
+                  ) : (
+                    cart.map((item, i) => {
+                      return (
+                        <div key={`${item.unique_id}-${i}`}>
+                          <CartItems item={item} />
+                          <hr className={styles.checkourHr} />
+                        </div>
+                      );
+                    })
+                  )}
                 </div>
               </div>
 
@@ -90,7 +94,7 @@ function CheckoutPage({ onClick }) {
                   <h3>Order Checkout Details</h3>
                   <div className={styles.itemPrices}>
                     <div className={styles.itemPrice}>
-                      <p>Items price (3)</p>
+                      <p>Items price ({itemAmount})</p>
                       <p>N {total}</p>
                     </div>
 
@@ -129,6 +133,7 @@ function CheckoutPage({ onClick }) {
 
 CheckoutPage.propTypes = {
   onClick: PropTypes.func.isRequired,
+  itemAmount: PropTypes.any,
 };
 
 export default CheckoutPage;
