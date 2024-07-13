@@ -167,3 +167,8 @@ export const datas = [
     label: "kidCloth",
   },
 ];
+
+<p>
+  Indulge in our curated collection: chic clothing, elegant jewelry, luxurious
+  beauty, and essential grooming for all.
+</p>;

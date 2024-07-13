@@ -1,19 +1,16 @@
 import styles from "./CheckoutPage.module.css";
+import { CartContext } from "../../Context/CartContext";
+import { useContext } from "react";
 import PropTypes from "prop-types";
-import { toast } from "react-toastify";
 import { Link } from "react-router-dom";
 import CartItems from "../myCart/CartItems";
-import corset from "../../assets/images/silver top.webp";
-import kidsStar from "../../assets/images/kids-star.webp";
-import lacoste from "../../assets/images/lacoste.webp";
 import { MdOutlineEdit } from "react-icons/md";
 import { CheckoutBreadCrum } from "../breadCrumb/BreadCrumb";
 import DeliveryOptions from "./DeliveryOptions";
 
-function CheckoutPage() {
-  const confirmOrder = () => {
-    toast.success("Order Confirmed");
-  };
+function CheckoutPage({ onClick }) {
+  const { cart, total } = useContext(CartContext);
+  const totalCost = total + 3000;
 
   return (
     <div className={styles.checkOutSection}>
@@ -63,28 +60,16 @@ function CheckoutPage() {
               <div className={styles.checkBoxes}>
                 <div className={styles.customersItem}>
                   <h3>Items in checkout</h3>
-                  <CartItems
-                    name="Silver corset top"
-                    price="N20,000"
-                    img={corset}
-                    className={styles.itemsInCart}
-                  />
-                  <hr className={styles.checkourHr} />
-                  <CartItems
-                    name="kids star"
-                    price="N2,000"
-                    img={kidsStar}
-                    className={styles.itemsInCart}
-                  />
-                  <hr className={styles.checkourHr} />
-                  <CartItems
-                    name="Lacoste designer"
-                    price="N20,000"
-                    img={lacoste}
-                    className={styles.itemsInCart}
-                  />
+
+                  {cart.map((item, i) => {
+                    return (
+                      <div key={`${item.unique_id}-${i}`}>
+                        <CartItems item={item} />
+                        <hr className={styles.checkourHr} />
+                      </div>
+                    );
+                  })}
                 </div>
-                <hr className={styles.checkourHr} />
               </div>
 
               {/* Payment Options */}
@@ -106,7 +91,7 @@ function CheckoutPage() {
                   <div className={styles.itemPrices}>
                     <div className={styles.itemPrice}>
                       <p>Items price (3)</p>
-                      <p>N42, 000</p>
+                      <p>N {total}</p>
                     </div>
 
                     <div className={styles.itemPrice}>
@@ -121,13 +106,13 @@ function CheckoutPage() {
 
                     <div className={styles.itemPrice}>
                       <p>Total cost</p>
-                      <p>N45, 000</p>
+                      <p>N {totalCost}</p>
                     </div>
                   </div>
 
-                  <Link to="#/" onClick={confirmOrder}>
+                  <button className={styles.btn} onClick={onClick}>
                     Confirm order
-                  </Link>
+                  </button>
                   <p>
                     Return Policy: &nbsp; Return within 3 days for all items.
                     Read more on our return policy <Link to="#/">here</Link>.
@@ -141,6 +126,10 @@ function CheckoutPage() {
     </div>
   );
 }
+
+CheckoutPage.propTypes = {
+  onClick: PropTypes.func.isRequired,
+};
 
 export default CheckoutPage;
 

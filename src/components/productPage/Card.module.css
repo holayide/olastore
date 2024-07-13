@@ -14,9 +14,17 @@
   box-shadow: 2px 2px 12px 0px rgba(0, 0, 0, 0.15);
 }
 
-.cardImg > img {
+.cardImg {
+  height: 28.7rem;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.cardImg > a > img {
   display: block;
+  height: 100%;
   width: 100%;
+  object-fit: cover;
 }
 
 .cardImg .heartWrapper {

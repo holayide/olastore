@@ -7,31 +7,31 @@ import kidFootwear from "../assets/images/kids-footwear2.svg";
 
 export const products = [
   {
-    id: 1,
+    id: 100,
     productImg: womenCloth,
     productname: "Women’s clothing",
   },
 
   {
-    id: 2,
+    id: 200,
     productImg: menFootwear,
     productname: "Men’s Footwears",
   },
 
   {
-    id: 3,
+    id: 300,
     productImg: kidsDress,
     productname: "Kid’s clothing",
   },
 
   {
-    id: 4,
+    id: 400,
     productImg: womenFootwear,
     productname: "Women’s Footwears",
   },
 
   {
-    id: 5,
+    id: 500,
     productImg: kidFootwear,
     productname: "Kid’s Footwears",
   },

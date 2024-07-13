@@ -203,19 +203,24 @@
   font-weight: 700;
 }
 
-.innerCheckOutCard > a {
-  display: block;
+.innerCheckOutCard > .btn {
+  width: 100%;
   margin: 3.2rem 0 2.3rem;
   padding: 1.2rem 0.8rem;
 
   color: var(--sec-color);
-  text-align: center;
   font-size: 1.6rem;
   font-weight: 700;
   line-height: 24px;
 
   border-radius: 8px;
+  border: none;
   background-color: var(--pri-color);
+  cursor: pointer;
+}
+
+.innerCheckOutCard > .btn:hover {
+  background-color: var(--hover-green);
 }
 
 .innerCheckOutCard > p:last-of-type {
@@ -311,7 +316,7 @@
     margin-bottom: 1.6rem;
   }
 
-  .innerCheckOutCard > a {
+  .innerCheckOutCard > .btn {
     margin: 2.4rem 0 2.4rem;
   }
 }

@@ -1,0 +1,44 @@
+.paginationNav .paginationList {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding-bottom: 12.7rem;
+}
+
+.paginationList .pageItem,
+.pageIcon {
+  border: 1px solid var(--accent-grey);
+  border-radius: 8px;
+}
+
+.paginationList .pageItem a:visited,
+.paginationList .pageItem a:link {
+  display: inline-block;
+  font-size: 1.6rem;
+  font-weight: 700;
+  padding: 0.8rem 1.6rem;
+
+  color: #000;
+}
+
+.paginationList .active {
+  background-color: var(--pri-color);
+  border: none;
+}
+
+.paginationList .active a:visited,
+.paginationList .active a:link {
+  color: #fff;
+}
+
+/* icons */
+.pageIcon a {
+  display: inline-block;
+  padding: 0.4rem 0.8rem 0.2rem;
+}
+
+.moveicon {
+  font-size: 2.5rem;
+  color: #000;
+}

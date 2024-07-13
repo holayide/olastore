@@ -1,12 +1,13 @@
 import styles from "./MyCart.module.css";
 import { RiDeleteBin7Line } from "react-icons/ri";
 import CartItems from "./CartItems";
-import corset from "../../assets/images/silver top.webp";
 import { OrderCheck } from "./OrderCheck";
-import kidsStar from "../../assets/images/kids-star.webp";
-import lacoste from "../../assets/images/lacoste.webp";
+import { CartContext } from "../../Context/CartContext";
+import { useContext } from "react";
 
 export default function MyCart() {
+  const { cart, clearCart, total } = useContext(CartContext);
+
   return (
     <div className={"container"}>
       <div className={styles.mycart}>
@@ -17,17 +18,17 @@ export default function MyCart() {
               <h4>Cart (3 items)</h4>
               <div className={styles.emptyCart}>
                 <RiDeleteBin7Line className={styles.whiteBin} />
-                <h4>Empty cart</h4>
+                <h4 onClick={() => clearCart()}>Empty cart</h4>
               </div>
             </div>
 
-            <CartItems name="Silver corset top" price="N20,000" img={corset} />
-            <CartItems name="kids star" price="N2,000" img={kidsStar} />
-            <CartItems name="Lacoste designer" price="N20,000" img={lacoste} />
+            {cart.map((item) => {
+              return <CartItems key={item.id} item={item} />;
+            })}
           </div>
 
           <div className={styles.cartDetails}>
-            <OrderCheck />
+            <OrderCheck total={total} />
           </div>
         </div>
       </div>

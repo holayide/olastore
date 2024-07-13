@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import styles from "./BreadCrumb.module.css";
 import { PiGreaterThanLight } from "react-icons/pi";
@@ -27,3 +28,19 @@ export function CheckoutBreadCrum() {
     </div>
   );
 }
+
+export function ItemBreadCrum({ product }) {
+  return (
+    <div className="container">
+      <div className={styles.breadCrumb}>
+        <Link to="/">Home</Link>
+        <PiGreaterThanLight className={styles.breadCrumbIcon} />
+        <Link to="#/">{product?.name}</Link>
+      </div>
+    </div>
+  );
+}
+
+ItemBreadCrum.propTypes = {
+  product: PropTypes.any,
+};

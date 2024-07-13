@@ -1,20 +1,16 @@
 import styles from "./ProductItems.module.css";
 import Card from "./Card";
-import { datas } from "../../utilities/Datas";
 import { HiArrowUp } from "react-icons/hi";
+import { useContext } from "react";
+import { ProductContext } from "../../Context/ProductContext";
 
 export default function ProductItems() {
+  const { products } = useContext(ProductContext);
+
   return (
     <div className={styles.cardsWrapper}>
-      {datas.map((data) => (
-        <Card
-          key={data.id}
-          itemImg={data.itemImg}
-          name={data.name}
-          price={data.price}
-          category={data.category}
-          label={data.label}
-        />
+      {products.map((data) => (
+        <Card key={data.unique_id} product={data} />
       ))}
 
       <div className={styles.moveUp} onClick={() => window.scrollTo(0, 0)}>
@@ -22,4 +18,15 @@ export default function ProductItems() {
       </div>
     </div>
   );
+}
+
+{
+  /* <Card
+key={data.unique_id}
+id={data.id}
+itemImg={data.photos[0].url}
+name={data.name}
+price={data.current_price[0]["NGN"][0]}
+category={data.category}
+/> */
 }

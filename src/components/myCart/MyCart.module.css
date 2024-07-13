@@ -50,6 +50,11 @@
   display: flex;
   align-items: center;
   gap: 0.8rem;
+  cursor: pointer;
+}
+
+.cartHeader .emptyCart:hover {
+  color: var(--error-color, 0.1);
 }
 
 .emptyCart .whiteBin {

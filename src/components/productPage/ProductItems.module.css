@@ -2,9 +2,10 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 0.8rem 1.6rem;
-  margin: 6.4rem 0 12.7rem;
+  margin: 6.4rem 0 7.4rem;
 
   position: relative;
+  /* border: 1px solid red; */
 }
 
 .moveUp {

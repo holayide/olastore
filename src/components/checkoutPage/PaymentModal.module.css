@@ -1,0 +1,149 @@
+.modalContainer {
+  width: 100%;
+  height: 100%;
+
+  position: fixed;
+  inset: 0;
+  z-index: 2;
+  background-color: rgba(200, 200, 200, 0.1);
+  backdrop-filter: blur(3px);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modalWrapper {
+  width: 500px;
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  border-radius: 6.05px;
+  background: #fff;
+  box-shadow: 0px 24.22px 54.49px 0px rgba(0, 0, 0, 0.25);
+  padding: 2rem 3rem 9rem;
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.headArrow {
+  position: absolute;
+  left: 0;
+  cursor: pointer;
+  color: var(--pri-color);
+}
+
+.backIcon {
+  font-size: 2.5rem;
+}
+
+.head h3 {
+  font-size: 2rem;
+  font-family: var(--moul-font);
+  font-weight: 400;
+}
+
+.innerBox {
+  margin-bottom: 3rem;
+}
+
+.creditCard {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.cardCardIcon {
+  font-size: 2rem;
+}
+
+.creditCard h4 {
+  font-size: 1.7rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.form label {
+  display: block;
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.formInput input {
+  width: 100%;
+}
+
+.innerBox input {
+  padding: 0.8rem 0.5rem;
+}
+
+.itemForms {
+  display: flex;
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+.expiry {
+  width: 66.6%;
+}
+
+.expiry > div {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.expiry input {
+  width: 100%;
+}
+
+.cvc {
+  width: 33.3%;
+}
+
+.cvc input {
+  width: 100%;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 3rem;
+  font-size: 1.2rem;
+}
+
+.payNow {
+  width: 100%;
+  padding: 1rem 0;
+  border: 0;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--sec-color);
+  background-color: var(--pri-color);
+  cursor: pointer;
+}
+
+.payNow:hover {
+  background-color: var(--hover-green);
+}
+
+@media (max-width: 566px) {
+  .modalWrapper {
+    width: 100%;
+    margin: 0 3rem;
+  }
+}

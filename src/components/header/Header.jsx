@@ -11,10 +11,12 @@ import { BiMessageX } from "react-icons/bi";
 import { MdOutlinePolicy } from "react-icons/md";
 import { MdHelpOutline } from "react-icons/md";
 import { IoMdClose } from "react-icons/io";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { CartContext } from "../../Context/CartContext";
 
 function Header() {
   const [open, setOpen] = useState(false);
+  const { itemAmount } = useContext(CartContext);
 
   function handleOpen() {
     setOpen((preOpen) => !preOpen);
@@ -51,15 +53,20 @@ function Header() {
             <Link to="/cart" className={styles.activeLink}>
               <GrCart className={styles.mobileListImg} />
             </Link>
-            <Link to="#/" className={styles.dormantLink}>
-              <GoPerson className={styles.mobileListImg} />
-            </Link>
+            <div className={styles.navlist}>
+              <Link to="#/" className={styles.dormantLink}>
+                <GoPerson className={styles.mobileListImg} />
+              </Link>
+              <div className={`${styles.cartno} ${styles.smallCart}`}>
+                <span>{itemAmount}</span>
+              </div>
+            </div>
           </div>
         </div>
 
         <nav className={`${styles.nav} ${open ? styles.open : ""}`}>
           <ul>
-            <li>
+            <li className={styles.navlist}>
               <NavLink
                 to="/cart"
                 onClick={closeMenu}
@@ -68,6 +75,9 @@ function Header() {
                 <GrCart className={styles.listImg} />
                 <span>Cart</span>
               </NavLink>
+              <div className={styles.cartno}>
+                <span>{itemAmount}</span>
+              </div>
             </li>
             <li onClick={dormantLink}>
               <Link to="#/" onClick={closeMenu} className={styles.dormantLink}>
