@@ -1,6 +1,6 @@
 .cardsWrapper {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 0.8rem 1.6rem;
   margin: 6.4rem 0 7.4rem;
 

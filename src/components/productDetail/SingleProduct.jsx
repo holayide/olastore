@@ -11,40 +11,26 @@ function SingleProduct({ product }) {
   if (!product) {
     return null;
   }
-  const price = product?.current_price?.[0]?.["NGN"]?.[0]
-    ? parseFloat(product.current_price[0]["NGN"][0])
+  const price = product?.price
+    ? parseFloat(product?.price)
     : "Price not available";
   const id = product.id;
-
-  console.log(product);
 
   return (
     <div className="container">
       <div className={style.productdisplay}>
         <div className={style.productdisplayLeft}>
           <div className={style.productDisplayImgList}>
-            <img
-              src={`https://api.timbu.cloud/images/${product?.photos[0]?.url}`}
-              alt={product?.name}
-            />
-            <img
-              src={`https://api.timbu.cloud/images/${product?.photos[0]?.url}`}
-              alt={product?.name}
-            />
-            <img
-              src={`https://api.timbu.cloud/images/${product?.photos[0]?.url}`}
-              alt={product?.name}
-            />
-            <img
-              src={`https://api.timbu.cloud/images/${product?.photos[0]?.url}`}
-              alt={product?.name}
-            />
+            <img src={product?.image} alt={product?.name} />
+            <img src={product?.image} alt={product?.name} />
+            <img src={product?.image} alt={product?.name} />
+            <img src={product?.image} alt={product?.name} />
           </div>
           <div className={style.productdisplayImg}>
             <img
               onClick={window.scrollTo(0, 0)}
               className="productdisplay-main-img"
-              src={`https://api.timbu.cloud/images/${product?.photos[0]?.url}`}
+              src={product?.image}
               alt="Bigger view"
               loading="lazy"
             />

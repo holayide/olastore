@@ -10,11 +10,12 @@ import { CartContext } from "../../Context/CartContext";
 export default function CartItems({ item }) {
   const { removeFromCart, increaseAmount, decreaseAmount } =
     useContext(CartContext);
+
   const {
     id = item?.id,
-    itemImg = item?.photos[0]?.url,
+    itemImg = item?.image,
     name = item?.name,
-    price = item.current_price[0]?.["NGN"]?.[0],
+    price = item.price,
     amount,
     // category = item?.category,
   } = item;
@@ -23,7 +24,8 @@ export default function CartItems({ item }) {
     <div className={`${styles.cartItems}`}>
       <div className={styles.cartItem}>
         <div className={styles.cartItemImg}>
-          <img src={`https://api.timbu.cloud/images/${itemImg}`} alt={name} />
+          <img src={itemImg} alt={name} />
+          {/* <img src={`https://api.timbu.cloud/images/${itemImg}`} alt={name} /> */}
         </div>
         <div className={styles.cartItemDetails}>
           <p>{name}</p>

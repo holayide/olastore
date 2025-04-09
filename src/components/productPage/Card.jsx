@@ -9,14 +9,14 @@ import { CartContext } from "../../Context/CartContext";
 
 export default function Card({ product }) {
   const { addToCart } = useContext(CartContext);
-  console.log(product);
+  // .log(product);
 
   const {
     id = product?.id,
-    itemImg = product?.photos[0]?.url,
+    itemImg = product?.image,
     name = product?.name,
-    price = product.current_price[0]?.["NGN"]?.[0],
-    category = product?.description,
+    price = product.price,
+    category = product?.category,
   } = product;
 
   const [isHeartClicked, setIsHeartClicked] = useState(false);
@@ -29,7 +29,7 @@ export default function Card({ product }) {
     <div className={styles.cardWrapper}>
       <div className={styles.cardImg}>
         <Link to={`/product/${id}`}>
-          <img src={`https://api.timbu.cloud/images/${itemImg}`} alt={name} />
+          <img src={itemImg} alt={name} />
         </Link>
         <div className={styles.heartWrapper} onClick={handleHeartClick}>
           {isHeartClicked ? (

@@ -6,7 +6,10 @@ import { ImCreditCard } from "react-icons/im";
 
 function PaymentModal({ closeModel }) {
   const confirmOrder = () => {
-    toast.success("Confirmed 👍");
+    toast.success("Confirmed 👍", { autoClose: 1000, hideProgressBar: true });
+    setTimeout(() => {
+      closeModel(false);
+    }, 2000);
   };
 
   return (

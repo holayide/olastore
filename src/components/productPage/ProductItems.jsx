@@ -9,8 +9,8 @@ export default function ProductItems() {
 
   return (
     <div className={styles.cardsWrapper}>
-      {products.map((data) => (
-        <Card key={data.unique_id} product={data} />
+      {products.map((data, i) => (
+        <Card key={i} product={data} />
       ))}
 
       <div className={styles.moveUp} onClick={() => window.scrollTo(0, 0)}>

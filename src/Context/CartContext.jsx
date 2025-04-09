@@ -10,11 +10,15 @@ const CartProvider = ({ children }) => {
 
   // update total
   useEffect(() => {
+    // const total = cart.reduce((accumulator, currentItem) => {
+    //   return (
+    //     accumulator +
+    //     currentItem.current_price[0]?.NGN?.[0] * currentItem.amount
+    //   );
+    // }, 0);
+
     const total = cart.reduce((accumulator, currentItem) => {
-      return (
-        accumulator +
-        currentItem.current_price[0]?.NGN?.[0] * currentItem.amount
-      );
+      return accumulator + currentItem.price * currentItem.amount;
     }, 0);
     setTotal(total);
   }, [cart]);
@@ -29,7 +33,7 @@ const CartProvider = ({ children }) => {
     }
   }, [cart]);
 
-  //   add to cart
+  //   add to cartaddToCart
   const addToCart = (product, id) => {
     const newItem = { ...product, amount: 1 };
 

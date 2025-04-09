@@ -10,8 +10,7 @@ function ProductDetail() {
   const { addToCart } = useContext(CartContext);
   const { id } = useParams();
 
-  const product = products.find((e) => e.id === id);
-  // console.log(product);
+  const product = products.find((e) => e.id === Number(id));
 
   return (
     <div>
