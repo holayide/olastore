@@ -35,7 +35,7 @@ export function ItemBreadCrum({ product }) {
       <div className={styles.breadCrumb}>
         <Link to="/">Home</Link>
         <PiGreaterThanLight className={styles.breadCrumbIcon} />
-        <Link to="#/">{product?.name}</Link>
+        <Link to="#/">{product?.category}</Link>
       </div>
     </div>
   );

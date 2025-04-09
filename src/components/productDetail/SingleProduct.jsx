@@ -17,25 +17,18 @@ function SingleProduct({ product }) {
   const id = product.id;
 
   return (
-    <div className="container">
+    <div className={`container ${style.productDisplayWrapper}`}>
       <div className={style.productdisplay}>
-        <div className={style.productdisplayLeft}>
-          <div className={style.productDisplayImgList}>
-            <img src={product?.image} alt={product?.name} />
-            <img src={product?.image} alt={product?.name} />
-            <img src={product?.image} alt={product?.name} />
-            <img src={product?.image} alt={product?.name} />
-          </div>
-          <div className={style.productdisplayImg}>
-            <img
-              onClick={window.scrollTo(0, 0)}
-              className="productdisplay-main-img"
-              src={product?.image}
-              alt="Bigger view"
-              loading="lazy"
-            />
-          </div>
+        <div className={style.productdisplayImg}>
+          <img
+            onClick={window.scrollTo(0, 0)}
+            className="productdisplay-main-img"
+            src={product?.image}
+            alt="Bigger view"
+            loading="lazy"
+          />
         </div>
+        {/* </div> */}
 
         <div className={style.productdisplayRight}>
           <h1>{product?.name}</h1>
@@ -69,7 +62,7 @@ function SingleProduct({ product }) {
           </button>
           <div className={style.minitags}>
             <p>
-              Category: &nbsp; <span>{product?.description}</span>
+              Description: &nbsp; <span>{product?.description}</span>
             </p>
             <p>
               Tags: &nbsp; <span>Mordern Lastest</span>

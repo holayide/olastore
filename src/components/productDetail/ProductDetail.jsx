@@ -16,7 +16,6 @@ function ProductDetail() {
     <div>
       <ItemBreadCrum product={product} />
       <SingleProduct product={product} addToCart={addToCart} />
-      {/* <DescriptionBox /> */}
     </div>
   );
 }
