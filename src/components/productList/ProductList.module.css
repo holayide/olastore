@@ -43,6 +43,7 @@
 
   top: 50%;
   transform: translateY(-50%);
+  cursor: pointer;
 }
 
 .displayIcon1 {
@@ -53,6 +54,11 @@
   right: 0;
 }
 
+.displayIcons.disabledIcon {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
 .displayIconWrapper {
   width: 40px;
   height: 40px;
@@ -61,7 +67,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
+  /* cursor: pointer; */
 
   background-color: rgba(241, 245, 248, 0.8);
   box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.15);

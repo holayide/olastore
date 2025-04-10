@@ -8,8 +8,12 @@ import "swiper/css/navigation";
 import styles from "./ProductList.module.css";
 import { products } from "../../utilities/Products";
 import Display from "./Display";
+import { useState } from "react";
 
 function ProductList() {
+  const [isBeginning, setIsBeginning] = useState(true);
+  const [isEnd, setIsEnd] = useState(false);
+
   return (
     <section className={styles.productlistSection}>
       <div className="container">
@@ -17,13 +21,21 @@ function ProductList() {
           <h1>Find your next obsession</h1>
 
           <div className={styles.innerProductListContainer}>
-            <div className={`${styles.displayIcons} ${styles.displayIcon1}`}>
+            <div
+              className={`${styles.displayIcons} ${styles.displayIcon1} ${
+                isBeginning ? styles.disabledIcon : ""
+              }`}
+            >
               <div className={styles.displayIconWrapper}>
                 <GrPrevious className={styles.displayIcon} />
               </div>
             </div>
 
-            <div className={`${styles.displayIcons} ${styles.displayIcon2}`}>
+            <div
+              className={`${styles.displayIcons} ${styles.displayIcon2} ${
+                isEnd ? styles.disabledIcon : ""
+              }`}
+            >
               <div className={styles.displayIconWrapper}>
                 <GrNext className={styles.displayIcon} />
               </div>
@@ -41,6 +53,16 @@ function ProductList() {
               navigation={{
                 nextEl: `.${styles.displayIcon2}`,
                 prevEl: `.${styles.displayIcon1}`,
+              }}
+              onSlideChange={(swiper) => {
+                setIsBeginning(swiper.isBeginning);
+                setIsEnd(swiper.isEnd);
+              }}
+              onReachBeginning={() => setIsBeginning(true)}
+              onReachEnd={() => setIsEnd(true)}
+              onFromEdge={(swiper) => {
+                setIsBeginning(swiper.isBeginning);
+                setIsEnd(swiper.isEnd);
               }}
               className={styles.productSlider}
             >
