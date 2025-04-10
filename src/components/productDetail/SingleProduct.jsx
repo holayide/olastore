@@ -39,7 +39,7 @@ function SingleProduct({ product }) {
             <FaStar className={style.star} />
             <IoStarOutline className={style.star} />
           </div>
-          <p>₦ {price}</p>
+          <p>$ {price}</p>
           <div className={style.description}>
             Indulge in our curated collection: chic clothing, elegant jewelry,
             luxurious beauty, and essential grooming for all.

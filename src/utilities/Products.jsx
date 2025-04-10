@@ -3,7 +3,7 @@ import menFootwear from "../assets/images/men_footwears.webp";
 import kidsDress from "../assets/images/Kid's_dress.webp";
 import womenFootwear from "../assets/images/women-footwear2.svg";
 import kidFootwear from "../assets/images/kids-footwear2.svg";
-// import shirt from "../assets/images/shirt.webp";
+import shirt from "../assets/images/shirt.webp";
 
 export const products = [
   {
@@ -36,9 +36,9 @@ export const products = [
     productname: "Kid’s Footwears",
   },
 
-  // {
-  //   id: 6,
-  //   productImg: shirt,
-  //   productname: "Men’s clothings",
-  // },
+  {
+    id: 6,
+    productImg: shirt,
+    productname: "Men’s clothings",
+  },
 ];

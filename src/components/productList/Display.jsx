@@ -6,7 +6,11 @@ export default function Display(product) {
     <div className={styles.displayItemsWrapper}>
       <div className={styles.displayWrapper}>
         <div className={styles.imgContainer}>
-          <img src={productImg} alt={productname} />
+          <img
+            src={productImg}
+            alt={productname}
+            className={styles.productImg}
+          />
         </div>
         <p>{productname}</p>
       </div>

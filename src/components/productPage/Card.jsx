@@ -49,7 +49,7 @@ export default function Card({ product }) {
           </button>
         </div>
 
-        <h3>{price}</h3>
+        <h3>$ {price}</h3>
         <p>Category: &nbsp; {category}</p>
 
         <button onClick={() => addToCart(product, id)}>Purchase</button>
