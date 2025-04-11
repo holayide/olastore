@@ -7,6 +7,7 @@ const ProductProvider = ({ children }) => {
   const [products, setProducts] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(0);
+  const [loading, setLoading] = useState(false);
 
   const itemsPerPage = 9;
 
@@ -18,6 +19,7 @@ const ProductProvider = ({ children }) => {
       const url = `https://fakestoreapi.com/products?page=${page}&skip=${skip}`;
 
       try {
+        setLoading(true);
         const resp = await fetch(url);
         const data = await resp.json();
 
@@ -27,6 +29,8 @@ const ProductProvider = ({ children }) => {
         setTotalPages(Math.ceil(data.length / itemsPerPage));
       } catch (error) {
         console.error("Failed to fetch products:", error);
+      } finally {
+        setLoading(false);
       }
     };
 
@@ -37,7 +41,7 @@ const ProductProvider = ({ children }) => {
 
   return (
     <ProductContext.Provider
-      value={{ products, currentPage, totalPages, paginate }}
+      value={{ products, currentPage, totalPages, paginate, loading }}
     >
       {children}
     </ProductContext.Provider>
